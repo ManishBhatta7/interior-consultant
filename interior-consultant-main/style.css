@@ -179,6 +179,7 @@ footer {
 
 footer a {
   font-weight: 700;
+  color: #a9a9a9;
 }
 
 .menu-button button {
@@ -216,6 +217,7 @@ footer a {
 
 .mobile-navigation--item {
   font-size: 2rem;
+  color: #fff;
 
   display: flex;
 

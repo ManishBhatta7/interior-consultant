@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="img/devchallenges.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Interior</title>
+  </head>
+  <body>
+    <div class="mobile-navigation" id="mobile-navigation" id="card">
+      <div class="mobile-navigation--header">
+        <h1></h1>
+        <div class="close-button" onclick="toggleMobileNavigation()">
+          <button>
+            <span class="material-icons"> close </span>
+          </button>
+        </div>
+      </div>
+
+      <a href="" class="mobile-navigation--item mobile-navigation--item__active"
+        >Home</a
+      >
+      <a href="" class="mobile-navigation--item">Collection</a>
+      <a href="" class="mobile-navigation--item">About</a>
+      <a href="" class="mobile-navigation--item">Contact</a>
+    </div>
+    <div id="container">
+      <header>
+        <h1 class="logo">This Interior</h1>
+
+        <div
+          class="menu-button"
+          id="menu-button"
+          onclick="toggleMobileNavigation()"
+        >
+          <button>
+            <span class="material-icons"> menu </span>
+          </button>
+        </div>
+
+        <nav class="navigation">
+          <a href="" class="navigation--item navigation--item__active">Home</a>
+          <a href="" class="navigation--item">Collection</a>
+          <a href="" class="navigation--item">About</a>
+          <a href="" class="navigation--item">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="main--content">
+          <h1 class="headline">Modern interior</h1>
+          <p class="description">
+            A full-Service residential & commercial interior design and staging
+            company offering professional organizing & eco-services.
+          </p>
+          <button class="readMore-button">
+            Read more<span class="material-icons"> arrow_right_alt </span>
+          </button>
+        </div>
+        <div class="main--img">
+          <img src="img/photo1.png" alt="" />
+
+          <!--card starts here-->
+          <div class="card" id="card">
+            <div class="card-header">
+              <div class="card-media">
+                <img src="img/photo2.png" alt="" />
+              </div>
+
+              <div id="name">Aliza Webber</div>
+              <div id="job">Interior designer</div>
+            </div>
+            <div id="card-body"><p>Designed in 2020 by Aliza Webber</p></div>
+          </div>
+          <!--card ends-->
+        </div>
+      </main>
+      <footer>
+        <span>created by <a href="">Manish Bhatta</a> - devChallenges.io</span>
+      </footer>
+    </div>
+    <script>
+      function toggleMobileNavigation() {
+        var element = document.getElementById("mobile-navigation");
+
+        if (element.classList.contains("mobile-navigation__open")) {
+          document.getElementById("menu-button").style.display = "block";
+          document.getElementById("card").style.display = "block";
+          document.getElementById("card").style.transition =
+            "transform 300ms ease-in-out";
+          element.classList.remove("mobile-navigation__open");
+        } else {
+          element.classList.add("mobile-navigation__open");
+          document.getElementById("menu-button").style.display = "none";
+          document.getElementById("card").style.display = "none";
+          document.getElementById("card").style.transition =
+            "transform 300ms ease-in-out";
+        }
+      }
+    </script>
+  </body>
+</html>

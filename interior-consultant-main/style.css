@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #181719;
+  color: #fff;
+}
+
+p {
+  max-width: 410px;
+}
+
+#container {
+  max-width: 1200px;
+  padding: 24px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Crimson Pro", serif;
+  padding: 8px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+}
+
+.navigation {
+  flex-grow: 1;
+  margin-left: 2.5em;
+}
+
+.navigation--item {
+  text-decoration: none;
+  color: #bdbdbd;
+  margin-left: 86px;
+}
+
+.navigation--item:first-child {
+  margin-left: 28em;
+}
+
+.navigation--item__active {
+  border-bottom: 2px solid #ffffff;
+
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+.main--content {
+  flex: 1;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.headline {
+  font-family: "Lora", serif;
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  width: 410px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.readMore-button {
+  padding: 0;
+  margin-bottom: 7rem;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.readMore-button span {
+  background: inherit;
+
+  padding-left: 1rem;
+}
+
+.main--img {
+  flex: 1;
+}
+.main--img img {
+  width: 45em;
+  height: auto;
+}
+
+.card {
+  max-width: 25em;
+  height: 13em;
+
+  position: relative;
+  left: 19em;
+  bottom: 5em;
+  background: #181719;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  padding-left: 1em;
+  padding-top: 1.5em;
+}
+.card img {
+  position: absolute;
+  bottom: 8.5em;
+  width: 15%;
+  height: auto;
+  border-radius: 100%;
+}
+
+.card-header #name {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+
+  position: relative;
+
+  left: 6em;
+  bottom: 0em;
+}
+
+.card-header #job {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #828282;
+
+  position: relative;
+  left: 7em;
+}
+
+#card-body {
+  font-family: Lora;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 31px;
+
+  color: #ffffff;
+
+  margin-top: 2em;
+}
+
+footer {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  color: #a9a9a9;
+  padding-bottom: 2rem;
+}
+
+footer a {
+  font-weight: 700;
+}
+
+.menu-button button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.25rem;
+  display: none;
+}
+
+.mobile-navigation {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #181719;
+
+  transform: translateX(-100%);
+
+  transition: transform 500ms ease-in-out;
+  display: none;
+}
+
+.mobile-navigation--header {
+  display: flex;
+}
+.close-button button {
+  border: none;
+  background-color: transparent;
+  padding: 20px;
+  font-size: 1.5rem;
+
+  position: absolute;
+  right: 0;
+  outline: none;
+}
+
+.mobile-navigation--item {
+  font-size: 2rem;
+
+  display: flex;
+
+  align-content: flex-end;
+  padding-bottom: 2rem;
+
+  margin-top: 100px;
+
+  justify-content: center;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.mobile-navigation__open {
+  transform: translateX(0%);
+}
+
+.mobile-navigation--item__active {
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navigation--item {
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-button button {
+    flex-grow: 1;
+    position: absolute;
+    left: 21rem;
+    top: 2rem;
+    padding-right: 20px;
+    padding-top: 0px;
+    color: #fff;
+
+    display: block;
+  }
+
+  .headline {
+    font-size: 36px;
+  }
+
+  .description {
+    width: 216px;
+    font-size: 14px;
+  }
+  .navigation--item {
+    display: none;
+  }
+  main {
+    display: block;
+  }
+
+  .main--img img {
+    width: 21em;
+  }
+
+  .card img {
+    width: 20%;
+  }
+
+  #card-body {
+    font-size: 18px;
+  }
+
+  .card {
+    position: relative;
+    width: 17em;
+
+    left: 3em;
+    bottom: 3em;
+  }
+
+  .mobile-navigation {
+    display: block;
+  }
+}
